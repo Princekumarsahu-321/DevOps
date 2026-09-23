@@ -1,11 +1,12 @@
-const express=require('express')
-const app=require('./src/app')
+import "dotenv/config";
 
+import app from "./src/app.js";
+import connectDB from "./src/db/db.js";
 
+const PORT = process.env.PORT || 3000;
 
+await connectDB();
 
-
-app.listen(3000,"0.0.0/0",()=>{
-    console.log("server is running port 3000");
-    
-})
+app.listen(PORT,"0.0.0.0",() => {
+  console.log(`Server running on port ${PORT}`);
+});

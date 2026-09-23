@@ -1,0 +1,11 @@
+const express=require('express')
+const app=require('./src/app')
+
+
+
+
+
+app.listen(3000,"0.0.0/0",()=>{
+    console.log("server is running port 3000");
+    
+})
